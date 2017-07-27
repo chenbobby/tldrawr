@@ -9,7 +9,12 @@
  import * as bodyParser from 'body-parser';
  import * as expressValidator from 'express-validator';
  import * as errorHandler from 'errorhandler';
- import * as passport from 'passport';
+
+
+ /**
+  * Route Imports
+  */
+import { apiRouter } from './routes';
 
  
  /**
@@ -37,6 +42,8 @@ app.use(expressValidator());
 app.get('/', (req, res, next) => {
     res.send('Hello World.');
 });
+
+app.use('/api', apiRouter);
 
 
 /**
