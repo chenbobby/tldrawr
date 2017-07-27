@@ -12,6 +12,6 @@ apiRouter.get('/', (req, res) => {
 });
 
 apiRouter.get('/feed', (req, res) => {
-    let feed = getFeed('http://feeds.bbci.co.uk/news/world/rss.xml')
+    let feed = getFeed('http://feeds.bbci.co.uk/news/technology/rss.xml')
     res.send('Api Feed');
 });
